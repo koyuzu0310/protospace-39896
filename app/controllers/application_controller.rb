@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
- 
+ #before_action :authenticate_user!ここだとログアウト状態でユーザー詳細ページに移動できなくなる
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   private
